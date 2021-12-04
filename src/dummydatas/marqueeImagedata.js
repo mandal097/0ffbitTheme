@@ -1,0 +1,55 @@
+export const images = [
+    {
+    img:'https://images.pexels.com/photos/6816470/pexels-photo-6816470.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+    },
+    {
+    img:'https://images.pexels.com/photos/1751731/pexels-photo-1751731.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+    },
+    {
+    img:'https://images.pexels.com/photos/89909/pexels-photo-89909.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=50',
+    },
+    {
+    img:'https://images.pexels.com/photos/3428498/pexels-photo-3428498.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+    },
+    {
+    img:'https://images.pexels.com/photos/3075993/pexels-photo-3075993.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+    },
+     {
+    img:'https://images.pexels.com/photos/164729/pexels-photo-164729.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+    },
+    {
+    img:'https://images.pexels.com/photos/625788/pexels-photo-625788.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+    },
+    {
+    img:'https://images.pexels.com/photos/2118046/pexels-photo-2118046.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+    },
+    {
+    img:'https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+    },
+    {
+    img:'https://images.pexels.com/photos/2108813/pexels-photo-2108813.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+    },
+    {
+    img:'https://images.pexels.com/photos/2156327/pexels-photo-2156327.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+    },
+    {
+    img:'https://images.pexels.com/photos/6816470/pexels-photo-6816470.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+    },
+    {
+    img:'https://images.pexels.com/photos/1751731/pexels-photo-1751731.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+    },
+    {
+    img:'https://images.pexels.com/photos/1716580/pexels-photo-1716580.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+    },
+    {
+    img:'https://images.pexels.com/photos/89909/pexels-photo-89909.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+    },
+    {
+    img:'https://images.pexels.com/photos/3428498/pexels-photo-3428498.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+    },
+    {
+    img:'https://images.pexels.com/photos/3075993/pexels-photo-3075993.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+    },
+
+
+]
