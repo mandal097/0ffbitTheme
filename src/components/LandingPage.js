@@ -14,8 +14,7 @@ const LandingPage = () => {
         right: '14rem',
         bottom: ' 14rem',
         zIndex: '3',
-        // display:"none"
-        
+
     }
     const styels2 = {
         position: ' absolute',
@@ -74,7 +73,7 @@ const LandingPage = () => {
                 <div className="after"  ></div>
                 <Logo src='Images/1HLogoWhiteLinesNoBG.png' />
                 <CircleDiv >
-                    <Img src="Images/watchbtn.jpg" alt="" onClick={handleClick} />
+                    <Img src="Images/watchbutton.jpg" alt="" onClick={handleClick} />
                     <FistImg src="Images/yo.jpeg" alt="" className="img" onClick={handleClick} />
                 </CircleDiv>
                 <CancelDiv style={cancel} onClick={hidevideo}><CloseOutlined /></CancelDiv>
@@ -130,30 +129,6 @@ height: 100vh;
 width: 100%; 
 position: relative;
 `
-const FistImg = styled.img`
-height: 10.25rem;
-width:10.25rem;
-position: absolute;
-bottom: 7.36rem;
-right: 11.365rem;
-border-radius: 50%;
-object-fit: cover;
-opacity: 0.9;
-filter: contrast(1.7);
-cursor: pointer;
-z-index: 1;
-`
-
-const CancelDiv = styled.div`
-height: 5rem;
-width: 5rem; 
-font-size: 5rem;
-position: absolute;
-top: 5rem;
-right: 12rem;
-color: white;
-transition-delay: 500ms;
-`
 
 const Img = styled.img`
 height: 15rem;
@@ -168,6 +143,34 @@ filter: contrast(1.7);
 cursor: pointer;
 z-index: 1;
 animation: watchbtn 6s linear infinite;
+`
+const FistImg = styled.img`
+height: 9rem;
+width:9rem;
+position: absolute;
+bottom: 8rem;
+right:12rem;
+border: 1px solid white;
+border-radius: 50%;
+object-fit: cover;
+opacity: 0.9;
+filter: contrast(1.7);
+cursor: pointer;
+z-index: 1;
+`
+
+
+const CancelDiv = styled.div`
+height: 5rem;
+width: 5rem; 
+font-size: 5rem;
+position: absolute;
+top: 5rem;
+right: 14rem;
+color: white;
+cursor: pointer;
+text-shadow: 1px 2px 10px 20px red;
+transition-delay: 500ms;
 `
 
 const Iframe = styled.iframe`
