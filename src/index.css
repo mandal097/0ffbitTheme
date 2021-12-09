@@ -32,3 +32,15 @@ code {
     font-size: 50%;
   }
 }
+
+
+
+/* animation for the watch button in landing page */
+@keyframes watchbtn{
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
