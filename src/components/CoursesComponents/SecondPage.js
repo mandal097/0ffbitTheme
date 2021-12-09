@@ -1,40 +1,11 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
-import { data } from '../../dummydatas/secondPageData'
 const SecondPage = ({ props }) => {
-    const [count, setCount] = useState(0)
-    setTimeout(() => {
-        count < 3 ? setCount(count + 1) : setCount(0)
-    }, 4000);
-
-    const items = data[count]
-
-    const handleClick1 =() =>{
-        setCount(0)
-    }
-    const handleClick2 =() =>{
-        setCount(1)
-    }
-    const handleClick3 =() =>{
-        setCount(2)
-    }
-    const handleClick4 =() =>{
-        setCount(3)
-    }
     return (
         <Container>
             <Wrapper>
                 <Left>
-                    <LeftH>{items.content}</LeftH>
-                    <LeftImg src={items.img} />
-                    <LeftName>{items.name}</LeftName>
-                    <LeftStatus>{items.status}</LeftStatus>
-                    <AcitveDivs>
-                        <Acitve onClick={handleClick1}  ></Acitve>
-                        <Acitve onClick={handleClick2}  ></Acitve>
-                        <Acitve onClick={handleClick3}  ></Acitve>
-                        <Acitve onClick={handleClick4}  ></Acitve>
-                    </AcitveDivs>
+                    <Img src="http://tabula.bold-themes.com/shady/wp-content/uploads/sites/4/2019/03/inner_girl.png" />
                 </Left>
                 <Right>
                     <RightH> <span> Programs for every</span> level and need</RightH>
@@ -69,56 +40,16 @@ const Left = styled.div`
 width: 46%;
 height: 90%;
 display: flex;
-flex-direction: column;
-align-items: flex-end;
+align-items: center;
 justify-content: center;
 `
-const LeftH = styled.h2`
-font-size: 3.5rem;
-text-align: right;
-line-height: 1.5;
-font-weight: 400;
-color: grey;
-
-`
-const LeftImg = styled.img`
-height: 15rem;
-width:15rem;
+const Img = styled.img`
+height: 99%;
+width: 99%;
+border-radius: 50%;
 object-fit: cover;
-border-radius: 50%;
-margin: 3.4rem 0;
 `
-const LeftName = styled.span`
-font-size: 1.5rem;
-font-weight: bold;
-color: rgba(0,0,0,0.8);
-text-transform: uppercase;
-`
-const LeftStatus = styled.span`
-font-size: 1.3rem;
-font-weight: bold;
-color: grey;
-`
-const AcitveDivs = styled.div`
-margin-top: 1rem;
-height: 3rem;
-width: 16%;
-display: flex;
-justify-content: space-between;
-`
-const Acitve = styled.div`
-width: 1.2rem;
-height: 1.2rem;
-border-radius: 50%;
-background-color: black;
-cursor: pointer;
-transition: all 300ms;
-&:hover{
-width: 1.4rem;
-height: 1.4rem;
-background-color:  #fe0049;
-}
-`
+
 
 const Right = styled.div`
 width: 46%;

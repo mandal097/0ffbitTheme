@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
+import { NavLink } from 'react-router-dom'
 import {
     ClockCircleOutlined,
     PhoneOutlined,
@@ -29,7 +30,9 @@ const Header = () => {
         <HeaderContainer>
             <HeaderContainerTop>
                 <HeaderLeftImage>
-                    <img src="http://tabula.bold-themes.com/shady/wp-content/uploads/sites/4/2019/03/logo.png" alt="" />
+                    <NavLink to="/">
+                        <img src="Images/1HLogoWhiteLinesNoBG.png" alt="" />
+                    </NavLink>
                 </HeaderLeftImage>
                 <HeaderRight>
                     <InfoDIv>
@@ -57,12 +60,12 @@ const Header = () => {
             </HeaderContainerTop>
             <HeaderContainerBottom b={bg}>
                 <HeaderContainerBottomLeft>
-                    <HeaderContainerBottomRightNavs>HOME</HeaderContainerBottomRightNavs>
+                    {/* <HeaderContainerBottomRightNavs>HOME</HeaderContainerBottomRightNavs>
                     <HeaderContainerBottomRightNavs>ABOUT</HeaderContainerBottomRightNavs>
                     <HeaderContainerBottomRightNavs>PROGRAMS</HeaderContainerBottomRightNavs>
                     <HeaderContainerBottomRightNavs>BLOGS</HeaderContainerBottomRightNavs>
                     <HeaderContainerBottomRightNavs>SHOP</HeaderContainerBottomRightNavs>
-                    <HeaderContainerBottomRightNavs>ELEMENTS</HeaderContainerBottomRightNavs>
+                    <HeaderContainerBottomRightNavs>ELEMENTS</HeaderContainerBottomRightNavs> */}
                 </HeaderContainerBottomLeft>
                 <HeaderContainerBottomRight>
                     <FacebookFilled />
@@ -78,6 +81,7 @@ const Header = () => {
 const HeaderContainer = styled.div`
 width: 100%;
 padding: 1rem 0;
+height: 8rem;
 `
 const HeaderContainerTop = styled.div`
 width: 100%;
@@ -85,9 +89,18 @@ display: flex;
 align-items: center;
 justify-content: space-between;
 border-bottom: 0.5px solid grey;
+margin-top: 1rem;
+height: 100%;
 `
 const HeaderLeftImage = styled.div`
 width: 50%;
+height: 100%;
+img{
+    margin-left: 2rem;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
 
 `
 const HeaderRight = styled.div`
@@ -135,9 +148,9 @@ top: 0px;
 right: 0;
 padding: 1rem 1rem;
 transition: all 500ms;
-background: ${props => props.b ? "white" :'none' };
-color: ${props => props.b ? "black" :'none' };
-position: ${props => props.b ? "fixed" :'' };
+background: ${props => props.b ? "white" : 'none'};
+color: ${props => props.b ? "black" : 'none'};
+position: ${props => props.b ? "fixed" : ''};
 `
 const HeaderContainerBottomLeft = styled.div`
 width: 50%;
@@ -145,12 +158,12 @@ display: flex;
 justify-content: space-between;
 
 `
-const HeaderContainerBottomRightNavs = styled.span`
-font-size: 1.2rem;
-font-weight: 600;
-cursor: pointer;
+// const HeaderContainerBottomRightNavs = styled.span`
+// font-size: 1.2rem;
+// font-weight: 600;
+// cursor: pointer;
 
-`
+// `
 const HeaderContainerBottomRight = styled.div`
 width: 10%;
 display: flex;

@@ -7,8 +7,8 @@ const Cards = ({ img, title }) => {
         <Card>
             <CardImg src={img} />
             <Content>
-                <H3>our courses</H3>
-                <H1>Guitar Lessons</H1>
+                <Small>our courses</Small>
+                <GuitarLessons>Guitar Lessons</GuitarLessons>
                 <P>All the image blocks that are on the next page will have this text written over them. We can .</P>
                 <NavLink to='course' className="nav"><Span>view more &rarr; </Span></NavLink>
             </Content>
@@ -18,7 +18,7 @@ const Cards = ({ img, title }) => {
 }
 
 const Card = styled.div`
-height:70vh ;
+height:75vh ;
 flex: 1 1 300px;
 display: flex;
 flex-direction: column;
@@ -27,7 +27,7 @@ justify-content: center;
 transition: all 200ms linear;
 margin: 1rem;
 position: relative;
-font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-family: 'Baloo 2', cursive;
 .nav{
     text-decoration: none;
 }
@@ -47,36 +47,36 @@ const Content = styled.div`
 position: absolute;
 padding: 4rem;
 width: 100%;
-height: 88%;
-bottom: 4.5rem;
+height: 35%;
+bottom: 5.9rem;
 display: flex;
 flex-direction: column;
 align-items: flex-start;
 justify-content: space-evenly;
-background: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,.6));
+/* background: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,.6)); */
 `
-const H3 = styled.h3`
-font-size:1.7rem;
+const Small = styled.small`
+font-size:1.4rem;
 color: white;
-font-weight: bold;
 text-transform: uppercase;
 `
 
-const H1 = styled.h1`
-font-size: 3.2rem;
+const GuitarLessons = styled.span`
+font-size: 2.5rem;
 color: white;
 font-weight: bold;
 `
 
-const P = styled.p`
+const P = styled.span`
 font-size: 1.5rem;
 color: white;
-font-weight: 600;
+font-weight: 400;
 line-height: 1.8;
+text-shadow: 1px 10px 2px 1px black;
 
 `
 const Span = styled.span`
-font-size: 2rem;
+font-size: 1.4rem;
 color: lightpink;
 text-transform: uppercase;
 font-weight: bold;

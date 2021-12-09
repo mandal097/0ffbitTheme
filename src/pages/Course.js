@@ -10,8 +10,8 @@ const Course = () => {
         <Container>
             <FirstPage />
             <SecondPage />
-            <ThirdPage />
             <Schedules />
+            <ThirdPage />
             <Footer/>
         </Container>
     )

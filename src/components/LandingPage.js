@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
+import { CloseOutlined } from '@ant-design/icons'
 
 const LandingPage = () => {
 
@@ -7,51 +8,80 @@ const LandingPage = () => {
 
     const styels = {
         position: 'absolute',
-        height: '8.4rem',
-        width: '8.4rem',
+        height: '0rem',
+        width: '0rem',
         borderRadius: '50%',
-        right: '4.8rem',
-        bottom: ' 4.7rem',
-        zIndex: '3'
-
+        right: '14rem',
+        bottom: ' 14rem',
+        zIndex: '3',
+        // display:"none"
+        
     }
     const styels2 = {
         position: ' absolute',
         height: '100%',
         width: '100%',
+        right: 0,
+        bottom: 0,
         border: 'none',
         transition: ' all 1s',
     }
+    const hide = {
+        zIndex: "-111"
+    }
+    const show = {
+        zIndex: "111"
+    }
     const [s, setS] = useState(styels);
+    const [cancel, setCancel] = useState(hide);
 
     const handleClick = () => {
         switch (showPopUp) {
             case false:
                 setShowPopUp(true);
                 setS(styels2)
+                setCancel(show)
                 break;
             case true:
                 setShowPopUp(false);
                 setS(styels)
+                setCancel(hide)
                 break;
             default:
                 setShowPopUp(false);
                 setS(styels2)
+                setCancel(show)
         }
+    }
+    const hidevideo = () => {
+        setS(styels)
+        setCancel(hide)
     }
 
 
     return (
         <>
             <Container >
-                <div className="after" onClick={handleClick} ></div>
-                <Logo src='Images/missingnotelogo.jpeg' />
+                {/* <ReactPlayer
+                    url="Video/tmnconcert.mp4?autoplay=1"
+                    style={s}
+                    playing={true}
+                    controls={true}
+                    
+                    width='1000px'
+                    height='1000px'
+                /> */}
+                <div className="after"  ></div>
+                <Logo src='Images/1HLogoWhiteLinesNoBG.png' />
                 <CircleDiv >
-                    <Img src="Images/watchbtn.jpg" alt="" />
+                    <Img src="Images/watchbtn.jpg" alt="" onClick={handleClick} />
+                    <FistImg src="Images/yo.jpeg" alt="" className="img" onClick={handleClick} />
                 </CircleDiv>
-                <Iframe onClick={handleClick}
+                <CancelDiv style={cancel} onClick={hidevideo}><CloseOutlined /></CancelDiv>
+                <Iframe
                     src={`Video/tmnconcert.mp4?autoplay=1`}
-                    autoplay
+                    autoplay="false"
+                    sandbox
                     style={s}
                     allowfullscreen
                 >
@@ -92,25 +122,49 @@ height: auto ;
 width: 20rem;
 object-fit: contain;
 position: absolute;
-bottom: 6rem;
-left: 2rem;
+bottom: 7rem;
+left: 7rem;
 `
 const CircleDiv = styled.div`
 height: 100vh;
 width: 100%; 
 position: relative;
 `
-
-const Img = styled.img`
-height: 12rem;
-width: 12rem;
+const FistImg = styled.img`
+height: 10.25rem;
+width:10.25rem;
 position: absolute;
-bottom:3rem;
-right: 3rem;
+bottom: 7.36rem;
+right: 11.365rem;
 border-radius: 50%;
 object-fit: cover;
 opacity: 0.9;
-filter: contrast(1.2);
+filter: contrast(1.7);
+cursor: pointer;
+z-index: 1;
+`
+
+const CancelDiv = styled.div`
+height: 5rem;
+width: 5rem; 
+font-size: 5rem;
+position: absolute;
+top: 5rem;
+right: 12rem;
+color: white;
+transition-delay: 500ms;
+`
+
+const Img = styled.img`
+height: 15rem;
+width: 15rem;
+position: absolute;
+bottom:5rem;
+right: 9rem;
+border-radius: 50%;
+object-fit: cover;
+opacity: 0.9;
+filter: contrast(1.7);
 cursor: pointer;
 z-index: 1;
 animation: watchbtn 6s linear infinite;
