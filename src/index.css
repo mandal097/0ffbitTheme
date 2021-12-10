@@ -46,3 +46,13 @@ code {
     transform: rotate(360deg);
   }
 }
+@keyframes popUp{
+  from{
+    width: 0;
+    height: 0;
+  }
+  to{
+    width: 50vw;
+    height: 50vh;
+  }
+}

@@ -1,59 +1,35 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import { CloseOutlined } from '@ant-design/icons'
+import Player from './Player'
 
 const LandingPage = () => {
 
-    const [showPopUp, setShowPopUp] = useState(false);
-
-    const styels = {
-        position: 'absolute',
-        height: '0rem',
-        width: '0rem',
-        borderRadius: '50%',
-        right: '14rem',
-        bottom: ' 14rem',
-        zIndex: '3',
-
-    }
-    const styels2 = {
-        position: ' absolute',
-        height: '100%',
-        width: '100%',
-        right: 0,
-        bottom: 0,
-        border: 'none',
-        transition: ' all 1s',
-    }
-    const hide = {
+    const [showPopUp, setShowPopUp] = useState(false); const hide = {
         zIndex: "-111"
     }
     const show = {
         zIndex: "111"
     }
-    const [s, setS] = useState(styels);
     const [cancel, setCancel] = useState(hide);
 
     const handleClick = () => {
         switch (showPopUp) {
             case false:
                 setShowPopUp(true);
-                setS(styels2)
                 setCancel(show)
                 break;
             case true:
                 setShowPopUp(false);
-                setS(styels)
                 setCancel(hide)
                 break;
             default:
                 setShowPopUp(false);
-                setS(styels2)
                 setCancel(show)
         }
     }
     const hidevideo = () => {
-        setS(styels)
+        setShowPopUp(false);
         setCancel(hide)
     }
 
@@ -61,31 +37,14 @@ const LandingPage = () => {
     return (
         <>
             <Container >
-                {/* <ReactPlayer
-                    url="Video/tmnconcert.mp4?autoplay=1"
-                    style={s}
-                    playing={true}
-                    controls={true}
-                    
-                    width='1000px'
-                    height='1000px'
-                /> */}
-                <div className="after"  ></div>
                 <Logo src='Images/1HLogoWhiteLinesNoBG.png' />
-                <CircleDiv >
-                    <Img src="Images/watchbutton.jpg" alt="" onClick={handleClick} />
-                    <FistImg src="Images/yo.jpeg" alt="" className="img" onClick={handleClick} />
-                </CircleDiv>
+                <Img src="Images/watchbutton.jpg" alt="" onClick={handleClick} />
+                <FistImg src="Images/yo.jpeg" alt="" className="img" onClick={handleClick} />
                 <CancelDiv style={cancel} onClick={hidevideo}><CloseOutlined /></CancelDiv>
-                <Iframe
-                    src={`Video/tmnconcert.mp4?autoplay=1`}
-                    autoplay="false"
-                    sandbox
-                    style={s}
-                    allowfullscreen
-                >
-                </Iframe>
             </Container>
+            {
+                showPopUp && <Player />
+            }
         </>
     )
 }
@@ -103,17 +62,12 @@ align-items: center;
 justify-content: center;
 position: relative;
 overflow-y: hidden;
-.after{
-    content: "";
-    position: absolute;
-    height: 13rem;
-    width: 13rem;
-    border-radius: 50%;
-    cursor: pointer;
-    bottom: 3rem;
-    right: 3rem;
-    z-index:2;
-}
+@media(max-width:600px){
+    width: 100%;
+    background-size: contain;
+    background-position: center;
+    height: 50vh;
+} 
 
 `
 const Logo = styled.img`
@@ -123,11 +77,9 @@ object-fit: contain;
 position: absolute;
 bottom: 7rem;
 left: 7rem;
-`
-const CircleDiv = styled.div`
-height: 100vh;
-width: 100%; 
-position: relative;
+@media(max-width:600px){
+   width: 13rem;
+} 
 `
 
 const Img = styled.img`
@@ -143,6 +95,11 @@ filter: contrast(1.7);
 cursor: pointer;
 z-index: 1;
 animation: watchbtn 6s linear infinite;
+@media(max-width:600px){
+    height: 10rem;
+    width: 10rem;
+} 
+
 `
 const FistImg = styled.img`
 height: 9rem;
@@ -157,6 +114,13 @@ opacity: 0.9;
 filter: contrast(1.7);
 cursor: pointer;
 z-index: 1;
+@media(max-width:600px){
+    height: 6rem;
+    width: 6rem;
+    bottom: 7.1rem;
+    right:11rem;
+} 
+
 `
 
 
@@ -171,13 +135,10 @@ color: white;
 cursor: pointer;
 text-shadow: 1px 2px 10px 20px red;
 transition-delay: 500ms;
+
+@media(max-width:600px){
+    right: 4rem;
+} 
 `
 
-const Iframe = styled.iframe`
-position: absolute;
-height: 100%;
-width: 100%;
-border: none;
-transition: all 1s;
-`
 export default LandingPage

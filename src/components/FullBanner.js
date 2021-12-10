@@ -91,7 +91,7 @@ const FullBanner = () => {
 }
 
 const Container = styled.div`
-height: 80vh;
+height: auto;
 width: 100%;
 display: flex;
 flex-direction: column;
@@ -102,7 +102,7 @@ background-size: cover;
 background-repeat: no-repeat;
 margin-bottom: 8rem;
 background-attachment: fixed;
-font-family: 'Baloo 2', cursive;
+font-family: 'Baloo 2', cursive; 
 `
 const Wrapper = styled.div`
 height: 100%;
@@ -110,16 +110,28 @@ width: 1200px;
 display: flex;
 justify-content: space-between;
 padding: 3rem;
+@media(max-width:1200px){
+    width: 100%;
+} 
+@media(max-width:850px){
+    flex-direction: column;
+} 
 `
 
 const Left = styled.div`
 width: 46%;
-height: 90%;
-min-height: 90%;
+height: 50vh;
+/* min-height: 90%;
+max-height: 90%;
+height: fit-content; */
 display: flex;
 flex-direction: column;
 align-items: flex-end;
 justify-content: center;
+@media(max-width:850px){
+   width: 90%;
+   margin:0 auto;
+} 
 `
 
 const LeftH = styled.h2`
@@ -176,6 +188,10 @@ flex-direction: column;
 align-items: flex-start;
 /* flex-wrap: wrap; */
 justify-content: space-between;
+@media(max-width:850px){
+   width: 90%;
+   margin:0 auto;
+} 
 `
 const RightH = styled.h1`
 font-size: 6rem;
@@ -191,6 +207,10 @@ font-size: 2rem;
 line-height: 1.5;
 font-weight:100;
 color: white;
+/* @media(max-width:1100px){
+    font-size: 1.5rem;
+    width: 80%;
+}  */
 `
 const RightPBottom = styled.div`
 width: 100%;
@@ -200,7 +220,7 @@ flex-wrap: wrap;
 align-items: center;
 `
 const RightPBottomWrapper = styled.div`
-flex: 1 1 200px;
+flex: 1 0 200px;
 height: auto;
 color: white;
 font-size: 2rem;
@@ -208,6 +228,9 @@ display: flex;
 align-items: center;
 justify-content: space-evenly;
 margin: 1rem;
+@media(max-width:1024px){
+    font-size: 0.7rem;
+} 
 `
 const RightPBottomIcons = styled.div`
 font-size: 4rem;

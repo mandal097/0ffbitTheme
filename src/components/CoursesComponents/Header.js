@@ -6,7 +6,6 @@ import {
     PhoneOutlined,
     EnvironmentOutlined,
     FacebookFilled,
-    TwitterOutlined,
     YoutubeFilled,
     InstagramOutlined
 } from '@ant-design/icons'
@@ -69,7 +68,6 @@ const Header = () => {
                 </HeaderContainerBottomLeft>
                 <HeaderContainerBottomRight>
                     <FacebookFilled />
-                    <TwitterOutlined />
                     <YoutubeFilled />
                     <InstagramOutlined />
                 </HeaderContainerBottomRight>
@@ -101,6 +99,9 @@ img{
     object-fit: cover;
     cursor: pointer;
 }
+@media(max-width:510px){
+    width: 30%;
+}
 
 `
 const HeaderRight = styled.div`
@@ -108,6 +109,9 @@ width: 50%;
 display: flex;
 align-items: center;
 justify-content: space-evenly;
+@media(max-width:510px){
+  width: 70%;
+}
 
 `
 const InfoDIv = styled.div`
@@ -151,12 +155,17 @@ transition: all 500ms;
 background: ${props => props.b ? "white" : 'none'};
 color: ${props => props.b ? "black" : 'none'};
 position: ${props => props.b ? "fixed" : ''};
+@media(max-width:510px){
+    width: 100%;
+    justify-content: flex-start;
+} 
 `
 const HeaderContainerBottomLeft = styled.div`
 width: 50%;
 display: flex;
-justify-content: space-between;
-
+@media(max-width:510px){
+    width: 1rem;
+}
 `
 // const HeaderContainerBottomRightNavs = styled.span`
 // font-size: 1.2rem;
@@ -175,6 +184,9 @@ font-size: 1.7rem;
     :hover{
         color: red;
     }
+}
+@media(max-width:510px){
+    width: 22%;
 }
 `
 

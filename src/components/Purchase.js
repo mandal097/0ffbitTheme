@@ -17,7 +17,8 @@ background-color: black;
 display: flex;
 flex-direction: column;
 align-items: center;
-justify-content: flex-start;
+justify-content: center;
+
 `
 const H2 = styled.h2`
 color: goldenrod;
@@ -36,6 +37,15 @@ font-size: 18rem;
 text-transform: uppercase;
 font-family: Verdana, Geneva, Tahoma, sans-serif;
 font-stretch: narrower;
+@media(max-width:670px){
+    font-size: 14rem;
+} 
+@media(max-width:520px){
+    font-size: 10rem;
+} 
+@media(max-width:330px){
+    font-size: 6rem;
+} 
 `
 const Button = styled.button`
 margin-top: 3rem;
@@ -55,6 +65,11 @@ height:2.5rem;
 width:2.5rem;
 background-color: orangered;
 bottom:4rem;
+@media(max-width:330px){
+    height:2rem;
+   width:2rem;
+   bottom: 1rem;
+} 
 `
 
 export default Purchase

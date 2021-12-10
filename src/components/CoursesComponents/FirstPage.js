@@ -27,7 +27,7 @@ background-position: center;
 color: white;
 font-family: Verdana, Geneva, Tahoma, sans-serif;
 @media (max-width:1210px){
-    height: auto;
+    height: 90vh;
 }
 `
 
@@ -48,6 +48,10 @@ margin: 0 auto;
 const Content = styled.div`
 width: 50%;
 height: 50%;
+padding:0 4rem;
+@media(max-width:500px){
+    width: 100%;
+}
 `
 const ContentH = styled.h2`
 font-size: 6rem;

@@ -12,13 +12,14 @@ const Course = () => {
             <SecondPage />
             <Schedules />
             <ThirdPage />
-            <Footer/>
+            <Footer />
         </Container>
     )
 }
 
 const Container = styled.div`
-
+height: 100vh;
+overflow: scroll;
 `
 
 export default Course

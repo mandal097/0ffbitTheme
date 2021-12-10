@@ -111,12 +111,16 @@ display: flex;
 align-items: center;
 justify-content: space-between;
 @media (max-width:1210px){
-    width: 100%;
+    width: 90%;
+    margin:0 auto;
 } 
 `
 const TopH = styled.h1`
 font-size: 4rem;
 color: white;
+@media(max-width:600px){
+font-size: 2.3rem;
+}
 `
 const TopBtnDiv = styled.h1`
 border: 1px solid white;
@@ -153,10 +157,12 @@ const BtnTxt = styled.span`
 color: white;
 font-size: 1.6rem;
 position: absolute;
-/* margin-top: 2rem; */
 top: 2.4rem;
 text-transform: uppercase;
 z-index:99;
+@media(max-width:600px){
+font-size: 1.1rem;
+}
 `
 // bottom styling for footer
 
@@ -184,20 +190,32 @@ display: flex;
 justify-content: space-evenly;
 flex-wrap: wrap;
 
+@media(max-width:550px){
+display: flex;
+flex-direction: column;
+align-items: center;
+width: 100%;
+}
 `
 const FooterDivs = styled.div`
 flex:1 1 250px;
 min-width:250px;
 max-width:250px;
 height: 40%;
+@media(max-width:550px){
+ display: flex;
+ flex-direction: column;
+ height: auto;
+justify-content: center;
+}
 `
 const FooterH = styled.span`
 color:  #fe0049;
 font-size: 2.5rem;
 font-weight: bolder;
+text-align: center;
 `
 const FooterWrap = styled.div`
-
 display: flex;
 width: 100%;
 align-items: center;
@@ -216,6 +234,11 @@ margin-top: 1.9rem;
     &:hover{
         color:  #fe0049;
     }
+}
+@media(max-width:550px){
+display: flex;
+align-items: center;
+flex-direction: column;
 }
 `
 const FooterWrapIcon = styled.div`
@@ -242,6 +265,7 @@ font-weight: 100;
 &[placeholder]{
     font-size: 1.3rem;
 }
+
 `
 const Button = styled.button`
 width: 100%;
