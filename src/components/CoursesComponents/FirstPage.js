@@ -6,7 +6,7 @@ const FirstPage = () => {
     return (
         <Container>
             <Wrapper>
-                <Header/>
+                <Header hide="none"/>
                 <Content>
                     <ContentH>Violin Lessons</ContentH>
                     <ContentP>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti aspernatur tenetur porro neque modi obcaecati impedit cumque facilis doloremque excepturi.</ContentP>
@@ -57,10 +57,12 @@ const ContentH = styled.h2`
 font-size: 6rem;
 font-weight: 400;
 margin-bottom: 1rem;
+font-family: 'Baloo 2', cursive;
 `
 const ContentP= styled.p`
 font-size: 1.8rem;
 line-height: 1.5;
 font-weight: 400;
+font-family: 'Baloo 2', cursive;
 `
 export default FirstPage

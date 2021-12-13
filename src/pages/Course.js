@@ -19,7 +19,8 @@ const Course = () => {
 
 const Container = styled.div`
 height: 100vh;
-overflow: scroll;
+overflow-y: scroll;
+font-family: 'Baloo 2', cursive;
 `
 
 export default Course

@@ -51,6 +51,7 @@ justify-content: center;
 position: relative;
 background:linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.6));
 margin: 1rem 0;
+font-family: 'Baloo 2', cursive;
 `
 const Img = styled.img`
 position: absolute;

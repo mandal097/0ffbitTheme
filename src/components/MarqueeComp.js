@@ -38,6 +38,9 @@ const Marquee = styled.marquee`
 display: flex;
 height: 95vh;
 margin-bottom: 2rem;
+@media(max-width:600px){
+    height: 60vh;
+}
 `
 
 const H2 = styled.h2`
@@ -69,24 +72,36 @@ object-fit:cover;
 width: 20vw;
 height: 45%;
 margin: 0.8rem;
+@media(max-width:600px){
+    width: 20rem;
+}
 `
 const Img1 = styled.img`
 object-fit:cover;
 width: 20vw;
 margin: 0.8rem;
 height: 30vh;
+@media(max-width:600px){
+    width: 20rem;
+}
 `
 const Img2 = styled.img`
 object-fit:cover;
 width: 20vw;
 margin: 0.8rem;
 height: 20vh;
+@media(max-width:600px){
+    width: 20rem;
+}
 `
 const Img3 = styled.img`
 object-fit:cover;
 width: 20vw;
 margin: 0.8rem;
 height: 50vh;
+@media(max-width:600px){
+    width: 20rem;
+}
 `
 
 

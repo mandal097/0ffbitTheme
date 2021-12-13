@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { CloseOutlined } from '@ant-design/icons'
 import Player from './Player'
+import Header from './CoursesComponents/Header'
 
 const LandingPage = () => {
 
@@ -37,6 +38,26 @@ const LandingPage = () => {
     return (
         <>
             <Container >
+                <div 
+                style={{
+                    width: "100%",
+                    position:'fixed',
+                    // position:'absolute',
+                    top:"0" ,
+                    zIndex:10,
+                    color: 'white',
+                    // backgroundColor:'black'
+                }}
+                >
+                <div className='headerDiv'
+                style={{
+                    width: "90%",
+                    margin: "0 auto"
+                }}
+                >
+                    <Header image="none"/>
+                </div>
+                </div>
                 <Logo src='Images/1HLogoWhiteLinesNoBG.png' />
                 <Img src="Images/watchbutton.jpg" alt="" onClick={handleClick} />
                 <FistImg src="Images/yo.jpeg" alt="" className="img" onClick={handleClick} />
@@ -62,6 +83,19 @@ align-items: center;
 justify-content: center;
 position: relative;
 overflow-y: hidden;
+.headerDiv{
+    /* background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.8)); */
+}
+/* div{
+width: 90%;
+position:fixed;
+top:0 ;
+right: 0;
+left: 0;
+z-index:10;
+color: white;
+} */
+
 @media(max-width:600px){
     width: 100%;
     background-size: contain;
@@ -129,8 +163,8 @@ height: 5rem;
 width: 5rem; 
 font-size: 5rem;
 position: absolute;
-top: 5rem;
-right: 14rem;
+top: 13rem;
+right: 16rem;
 color: white;
 cursor: pointer;
 text-shadow: 1px 2px 10px 20px red;

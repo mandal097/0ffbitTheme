@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import {
     ClockCircleOutlined,
     PhoneOutlined,
@@ -9,12 +9,20 @@ import {
     YoutubeFilled,
     InstagramOutlined
 } from '@ant-design/icons'
-const Header = () => {
+const Header = ({hide,image}) => {
+    const navigate = useNavigate()
     const [bg, setBg] = useState(false);
+
+    const goToCourses =()=>{
+        navigate('course')
+    }
+    const goToRegister =()=>{
+        navigate('register')
+    }
 
     useEffect(() => {
         window.addEventListener("scroll", () => {
-            if (window.scrollY > 100) {
+            if (window.scrollY > 800) {
                 setBg(true)
             } else {
                 setBg(false)
@@ -28,11 +36,15 @@ const Header = () => {
     return (
         <HeaderContainer>
             <HeaderContainerTop>
-                <HeaderLeftImage>
+                <HeaderLeftImage style={{display:`${image}`}} >
                     <NavLink to="/">
                         <img src="Images/1HLogoWhiteLinesNoBG.png" alt="" />
                     </NavLink>
                 </HeaderLeftImage>
+                <HeaderLeft style={{display:`${hide}`}} >
+                    <HeaderLeftSpan onClick={goToCourses}>Our Story</HeaderLeftSpan>
+                    <HeaderLeftSpan onClick={goToRegister} >Register Here</HeaderLeftSpan>
+                </HeaderLeft>
                 <HeaderRight>
                     <InfoDIv>
                         <Icon><ClockCircleOutlined /></Icon>
@@ -80,11 +92,12 @@ const HeaderContainer = styled.div`
 width: 100%;
 padding: 1rem 0;
 height: 8rem;
+font-family: 'Baloo 2', cursive;
 `
 const HeaderContainerTop = styled.div`
 width: 100%;
 display: flex;
-align-items: center;
+/* align-items: baseline; */
 justify-content: space-between;
 border-bottom: 0.5px solid grey;
 margin-top: 1rem;
@@ -104,6 +117,32 @@ img{
 }
 
 `
+
+const HeaderLeft = styled.div`
+width: 20%;
+height: 100%;
+display:flex;
+align-items:baseline;
+justify-content:space-between;
+@media(max-width:1345px){
+    width: 20%;
+}
+@media(max-width:1245px){
+    width: 30%;
+}
+@media(max-width:680px){
+    width: 40%;
+    font-size:1.4rem;
+}
+`
+const HeaderLeftSpan = styled.span`
+font-size:2rem;
+cursor:pointer;
+@media(max-width:680px){
+    font-size:1.4rem;
+}
+`
+
 const HeaderRight = styled.div`
 width: 50%;
 display: flex;
@@ -152,9 +191,9 @@ top: 0px;
 right: 0;
 padding: 1rem 1rem;
 transition: all 500ms;
-background: ${props => props.b ? "white" : 'none'};
-color: ${props => props.b ? "black" : 'none'};
-position: ${props => props.b ? "fixed" : ''};
+/* background: ${props => props.b ? "white" : 'none'};
+color: ${props => props.b ? "black" : 'none'}; */
+/* position: ${props => props.b ? "fixed" : ''}; */
 @media(max-width:510px){
     width: 100%;
     justify-content: flex-start;

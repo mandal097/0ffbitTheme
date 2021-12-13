@@ -120,10 +120,7 @@ padding: 3rem;
 
 const Left = styled.div`
 width: 46%;
-height: 50vh;
-/* min-height: 90%;
-max-height: 90%;
-height: fit-content; */
+height: 90%;
 display: flex;
 flex-direction: column;
 align-items: flex-end;
