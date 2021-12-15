@@ -20,9 +20,10 @@ const Header = ({hide,image}) => {
         navigate('register')
     }
 
+    
     useEffect(() => {
         window.addEventListener("scroll", () => {
-            if (window.scrollY > 800) {
+            if (window.scrollY > 200) {
                 setBg(true)
             } else {
                 setBg(false)
@@ -33,6 +34,7 @@ const Header = ({hide,image}) => {
         })
 
     }, [])
+  
     return (
         <HeaderContainer>
             <HeaderContainerTop>
@@ -91,16 +93,16 @@ const Header = ({hide,image}) => {
 const HeaderContainer = styled.div`
 width: 100%;
 padding: 1rem 0;
-height: 8rem;
+height: 6.2rem;
 font-family: 'Baloo 2', cursive;
 `
 const HeaderContainerTop = styled.div`
 width: 100%;
 display: flex;
-/* align-items: baseline; */
+align-items: center;
 justify-content: space-between;
-border-bottom: 0.5px solid grey;
-margin-top: 1rem;
+/* border-bottom: 0.5px solid grey; */
+/* margin-top: 1rem; */
 height: 100%;
 `
 const HeaderLeftImage = styled.div`
@@ -185,15 +187,19 @@ const HeaderContainerBottom = styled.div`
 width: 100%;
 font-size: 1.2rem;
 display: flex;
+align-items:center;
 justify-content: space-between;
 padding: 1rem 0;
 top: 0px;
 right: 0;
 padding: 1rem 1rem;
 transition: all 500ms;
-/* background: ${props => props.b ? "white" : 'none'};
-color: ${props => props.b ? "black" : 'none'}; */
-/* position: ${props => props.b ? "fixed" : ''}; */
+border-top: 0.5px solid grey;
+display: ${props => props.b ? "none" : 'flex'}; 
+
+/* background: ${props => props.b ? " white" : ''};
+color: ${props => props.b ? "white" : 'none'};
+position: ${props => props.b ? "fixed" : ''}; */
 @media(max-width:510px){
     width: 100%;
     justify-content: flex-start;

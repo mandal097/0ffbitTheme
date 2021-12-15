@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState ,useEffect} from 'react'
 import styled from 'styled-components'
 import { CloseOutlined } from '@ant-design/icons'
 import Player from './Player'
@@ -6,7 +6,10 @@ import Header from './CoursesComponents/Header'
 
 const LandingPage = () => {
 
-    const [showPopUp, setShowPopUp] = useState(false); const hide = {
+    const [showPopUp, setShowPopUp] = useState(false);
+    const [bg, setBg] = useState(false);
+    
+    const hide = {
         zIndex: "-111"
     }
     const show = {
@@ -34,19 +37,30 @@ const LandingPage = () => {
         setCancel(hide)
     }
 
+    useEffect(() => {
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 400) {
+                setBg(true)
+            } else {
+                setBg(false)
+            }
+            return () => {
+                window.removeEventListener("scroll")
+            }
+        })
+
+    }, [])
 
     return (
         <>
             <Container >
-                <div 
+                <HeaderDiv b={bg}
                 style={{
                     width: "100%",
                     position:'fixed',
-                    // position:'absolute',
                     top:"0" ,
                     zIndex:10,
                     color: 'white',
-                    // backgroundColor:'black'
                 }}
                 >
                 <div className='headerDiv'
@@ -57,7 +71,7 @@ const LandingPage = () => {
                 >
                     <Header image="none"/>
                 </div>
-                </div>
+                </HeaderDiv>
                 <Logo src='Images/1HLogoWhiteLinesNoBG.png' />
                 <Img src="Images/watchbutton.jpg" alt="" onClick={handleClick} />
                 <FistImg src="Images/yo.jpeg" alt="" className="img" onClick={handleClick} />
@@ -83,18 +97,6 @@ align-items: center;
 justify-content: center;
 position: relative;
 overflow-y: hidden;
-.headerDiv{
-    /* background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.8)); */
-}
-/* div{
-width: 90%;
-position:fixed;
-top:0 ;
-right: 0;
-left: 0;
-z-index:10;
-color: white;
-} */
 
 @media(max-width:600px){
     width: 100%;
@@ -102,8 +104,12 @@ color: white;
     background-position: center;
     height: 50vh;
 } 
-
 `
+const HeaderDiv = styled.div`
+transition:all 500ms linear;
+background: ${props => props.b ? "black" : 'none'};
+`
+
 const Logo = styled.img`
 height: auto ;
 width: 20rem;
