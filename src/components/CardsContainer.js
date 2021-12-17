@@ -10,7 +10,7 @@ const CardsContainer = () => {
             <CardContainer>
                 {
                     data.map((i => (
-                        <Cards items  key={i.id} img={i.img} title={i.title}/>
+                        <Cards items  key={i.id} i={i}/>
                     )))
                 }
             </CardContainer>

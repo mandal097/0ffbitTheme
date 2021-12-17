@@ -1,18 +1,26 @@
-import React from 'react'
+import React  from 'react'
 import styled from 'styled-components'
 import FirstPage from '../components/CoursesComponents/FirstPage'
 import Footer from '../components/CoursesComponents/Footer'
 import Schedules from '../components/CoursesComponents/Schedules'
 import SecondPage from '../components/CoursesComponents/SecondPage'
 import ThirdPage from '../components/CoursesComponents/ThirdPage'
+import { useLocation } from 'react-router-dom'
+import { data } from '../dummydatas/cardsData'
 const Course = () => {
+
+    const location = useLocation()
+    const path = location.pathname
+    const course = path.split('/')[2]
+    const u = data[course - 1]
+
     return (
         <Container>
-            <FirstPage />
-            <SecondPage />
-            <Schedules />
-            <ThirdPage />
-            <Footer />
+            <FirstPage u={u} />
+            <SecondPage u={u} />
+            <Schedules u={u} />
+            <ThirdPage u={u} />
+            <Footer u={u} />
         </Container>
     )
 }

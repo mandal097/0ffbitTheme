@@ -2,14 +2,18 @@ import React from 'react'
 import styled from 'styled-components'
 import Header from './Header'
 
-const FirstPage = () => {
+const FirstPage = ({ u }) => {
+    const image = u.courseFirstPageImg
     return (
-        <Container>
+        <Container >
+            <ImgDiv>
+                <img src={'/' + image} alt="" />
+            </ImgDiv>
             <Wrapper>
-                <Header hide="none"/>
+                <Header hide="none" />
                 <Content>
-                    <ContentH>Violin Lessons</ContentH>
-                    <ContentP>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti aspernatur tenetur porro neque modi obcaecati impedit cumque facilis doloremque excepturi.</ContentP>
+                    <ContentH>{u.title}</ContentH>
+                    <ContentP>{u.content}---- {u.title}</ContentP>
                 </Content>
             </Wrapper>
         </Container>
@@ -19,17 +23,36 @@ const FirstPage = () => {
 const Container = styled.div`
 height: 85vh;
 width: 100%;
-background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.5)), url('https://images.pexels.com/photos/1482476/pexels-photo-1482476.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+background: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1));
 background-attachment:fixed;
 background-repeat: no-repeat;
 background-size: cover;
 background-position: center;
 color: white;
 font-family: Verdana, Geneva, Tahoma, sans-serif;
+position:relative;
 @media (max-width:1210px){
     height: 90vh;
 }
 `
+const ImgDiv = styled.div`
+position:absolute;
+top:0;
+height:85vh;
+width:100%;
+background-color:red;
+z-index:-1;
+@media (max-width:1210px){
+    height: 90vh;
+}
+img{
+    height:100%;
+    width:100%;
+    z-index:-91;
+    object-fit:cover;
+}
+`
+
 
 const Wrapper = styled.div`
 display: flex;
@@ -59,7 +82,7 @@ font-weight: 400;
 margin-bottom: 1rem;
 font-family: 'Baloo 2', cursive;
 `
-const ContentP= styled.p`
+const ContentP = styled.p`
 font-size: 1.8rem;
 line-height: 1.5;
 font-weight: 400;

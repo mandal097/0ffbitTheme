@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
-const SecondPage = ({ props }) => {
+const SecondPage = ({ u }) => {
     return (
         <Container>
             <Wrapper>
                 <Left>
-                    <Img src="https://media.gettyimages.com/photos/actress-scarlett-johansson-enters-the-the-late-show-with-stephen-at-picture-id695706080?k=20&m=695706080&s=612x612&w=0&h=BNRkghBfp0ie4R7jNwRhUbmnr7NY0pxV4TRBh1Sl--M=" />
+                    <Img src={u.courseSecondPageImg} />
                     <Hash>#</Hash>
                     <HashSecond>#</HashSecond>
                 </Left>

@@ -10,7 +10,9 @@ import {
     YoutubeFilled
 } from '@ant-design/icons'
 
-const Footer = () => {
+const Footer = ({u}) => {
+
+    const footerImage = u.footerImg
     return (
         <Container>
             <Top>
@@ -23,6 +25,9 @@ const Footer = () => {
                 </TopWrapper>
             </Top>
             <Bottom>
+                <ImgDiv>
+                <img src={'/'+footerImage} alt="" />
+                </ImgDiv>
                 <BottomWrapper>
                     <FooterDivs>
                         <FooterH>Contact Us</FooterH>
@@ -169,8 +174,8 @@ font-size: 1.1rem;
 const Bottom = styled.div`
 width: 100%;
 height: 70vh;
-background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.8));
-background-image:  url("https://images.pexels.com/photos/33597/guitar-classical-guitar-acoustic-guitar-electric-guitar.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4));
+/* background-image:  url("https://images.pexels.com/photos/33597/guitar-classical-guitar-acoustic-guitar-electric-guitar.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500"); */
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
@@ -178,10 +183,29 @@ background-attachment: fixed;
 display: flex;
 align-items: center;
 justify-content: center;
+position:relative;
 @media(max-width:1000px){
     height: auto;
 }
 `
+const ImgDiv = styled.div`
+position:absolute;
+top:0;
+height:70vh;
+width:100%;
+/* background-color:red; */
+z-index:-1;
+@media(max-width:1000px){
+height: 100%;
+}
+img{
+    height:100%;
+    width:100%;
+    z-index:-91;
+    object-fit:cover;
+}
+`
+
 const BottomWrapper = styled.div`
 width: 1200px;
 height: 50%;
@@ -255,11 +279,11 @@ const EmailInput = styled.input`
 margin-top: 3rem;
 width: 100%;
 padding: 1.3rem ;
-background-color: transparent;
+background-color: lightgrey;
 border: 1px solid grey;
 border-radius: 10rem;
 font-size: 2rem;
-color: white;
+/* color: white; */
 outline: none;
 font-weight: 100;
 &[placeholder]{

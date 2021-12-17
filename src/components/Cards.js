@@ -2,17 +2,20 @@ import React from 'react'
 import styled from 'styled-components'
 import { NavLink } from 'react-router-dom'
 
-const Cards = ({ img, title }) => {
+
+const Cards = ({ i }) => {
+
+    const course = i.id
     return (
         <Card>
-            <CardImg src={img} />
+            <CardImg src={i.img} />
             <Content>
                 <Small>our courses</Small>
-                <GuitarLessons>Guitar Lessons</GuitarLessons>
-                <P>All the image blocks that are on the next page will have this text written over them. We can .</P>
-                <NavLink to='course' className="nav"><Span>view more &rarr; </Span></NavLink>
+                <GuitarLessons>{i.title}</GuitarLessons>
+                <P>{i.content}</P>
+                <NavLink to={`course/${course}`} className="nav"><Span>view more &rarr; </Span></NavLink>
             </Content>
-            <CardTitle className="title">{title}</CardTitle>
+            <CardTitle className="title">{i.title}</CardTitle>
         </Card>
     )
 }

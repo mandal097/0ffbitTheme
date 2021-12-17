@@ -12,6 +12,7 @@ const App = () => {
           <Route path='/*'>
             <Route index element={<Home />} />
             <Route path='course'  element={<Course />} />
+            <Route path='course/:course'  element={<Course />} />
             <Route path='register'  element={<Register />} />
           </Route>
         </Routes>

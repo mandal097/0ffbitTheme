@@ -14,7 +14,7 @@ const Header = ({hide,image}) => {
     const [bg, setBg] = useState(false);
 
     const goToCourses =()=>{
-        navigate('course')
+        navigate('course/1')
     }
     const goToRegister =()=>{
         navigate('register')
@@ -40,7 +40,7 @@ const Header = ({hide,image}) => {
             <HeaderContainerTop>
                 <HeaderLeftImage style={{display:`${image}`}} >
                     <NavLink to="/">
-                        <img src="Images/1HLogoWhiteLinesNoBG.png" alt="" />
+                        <img src="/Images/1HLogoWhiteLinesNoBG.png" alt="" />
                     </NavLink>
                 </HeaderLeftImage>
                 <HeaderLeft style={{display:`${hide}`}} >

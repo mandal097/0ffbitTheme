@@ -1,22 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 import ScheduleCards from './ScheduleCards'
-const Schedules = () => {
+const Schedules = ({ u }) => {
+
     return (
         <Container>
             <Wrapper>
-             <ScheduleCards
-             name="Violin Lessons Beginner"
-             img="https://images.pexels.com/photos/1010519/pexels-photo-1010519.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-             />
-             <ScheduleCards
-             name="Violin Lessons Intermediate"
-             img="https://images.pexels.com/photos/164729/pexels-photo-164729.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-             />
-             <ScheduleCards
-             name="Violin Lessons Advanced"
-             img="https://images.pexels.com/photos/1183095/pexels-photo-1183095.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-             />
+                <ScheduleCards title={u.title}  image={u.scheduleCardImg1} stat='begginer' />
+                <ScheduleCards title={u.title}  image={u.scheduleCardImg2} stat='intermediate' />
+                <ScheduleCards title={u.title}  image={u.scheduleCardImg3} stat='advanced' />
             </Wrapper>
         </Container>
     )

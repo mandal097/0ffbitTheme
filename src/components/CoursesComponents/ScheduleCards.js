@@ -1,12 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
-const ScheduleCards = ({ name, img }) => {
+const ScheduleCards = ({ title,image ,stat}) => {
     return (
         <Card>
-            <Img src={img} />
+            <Img src={'/'+image} />
             <CardWrapper>
                 <CardSpan>WEEKLY SCHEDULE</CardSpan>
-                <CardHeader>{name}</CardHeader>
+                <CardHeader>{title} lessons <br /> {stat} </CardHeader>
                 <ScheduleDIV>
                     <Days>
                         <Day> monday</Day>

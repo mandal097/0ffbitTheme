@@ -21,7 +21,7 @@ export const data=[
         img:'https://images.pexels.com/photos/2027394/pexels-photo-2027394.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
     },
     {
-        id:1,
+        id:4,
         content:" win-win survival strategies  to ensurevsurvival strategies  to ensure  proactive domination.",
         name:"fernendez",
         status:'student',
