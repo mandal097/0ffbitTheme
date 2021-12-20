@@ -69,7 +69,7 @@ const LandingPage = () => {
                     margin: "0 auto"
                 }}
                 >
-                    <Header image="none"/>
+                    <Header/>
                 </div>
                 </HeaderDiv>
                 <Logo src='Images/1HLogoWhiteLinesNoBG.png' />
@@ -97,6 +97,7 @@ align-items: center;
 justify-content: center;
 position: relative;
 overflow-y: hidden;
+s-top:2rem;
 
 @media(max-width:600px){
     width: 100%;

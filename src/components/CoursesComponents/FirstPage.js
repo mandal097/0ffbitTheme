@@ -5,18 +5,20 @@ import Header from './Header'
 const FirstPage = ({ u }) => {
     const image = u.courseFirstPageImg
     return (
-        <Container >
-            <ImgDiv>
-                <img src={'/' + image} alt="" />
-            </ImgDiv>
-            <Wrapper>
-                <Header hide="none" />
-                <Content>
-                    <ContentH>{u.title}</ContentH>
-                    <ContentP>{u.content}---- {u.title}</ContentP>
-                </Content>
-            </Wrapper>
-        </Container>
+        <>
+            <Container >
+                <ImgDiv>
+                    <img src={'/' + image} alt="" />
+                </ImgDiv>
+                    <Header black='black' left="5rem" />
+                <Wrapper>
+                    <Content>
+                        <ContentH>{u.title}</ContentH>
+                        <ContentP>{u.content2}</ContentP>
+                    </Content>
+                </Wrapper>
+            </Container>
+        </>
     )
 }
 
@@ -31,16 +33,17 @@ background-position: center;
 color: white;
 font-family: Verdana, Geneva, Tahoma, sans-serif;
 position:relative;
+/* padding-top:1rem; */
 @media (max-width:1210px){
     height: 90vh;
 }
 `
+
 const ImgDiv = styled.div`
 position:absolute;
 top:0;
 height:85vh;
 width:100%;
-background-color:red;
 z-index:-1;
 @media (max-width:1210px){
     height: 90vh;
@@ -58,7 +61,7 @@ const Wrapper = styled.div`
 display: flex;
 height: 100%;
 flex-direction: column;
-justify-content: space-between;
+justify-content: center;
 width: 1200px;
 font-size: 3rem;
 margin: 0 auto;

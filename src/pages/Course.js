@@ -7,6 +7,7 @@ import SecondPage from '../components/CoursesComponents/SecondPage'
 import ThirdPage from '../components/CoursesComponents/ThirdPage'
 import { useLocation } from 'react-router-dom'
 import { data } from '../dummydatas/cardsData'
+import Social from '../components/Social'
 const Course = () => {
 
     const location = useLocation()
@@ -21,6 +22,7 @@ const Course = () => {
             <Schedules u={u} />
             <ThirdPage u={u} />
             <Footer u={u} />
+            <Social/>
         </Container>
     )
 }

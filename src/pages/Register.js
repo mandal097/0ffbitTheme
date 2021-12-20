@@ -1,11 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 import Header from '../components/CoursesComponents/Header'
+import Social from '../components/Social'
 const Register = () => {
     return (
         <Container>
             <Wrapper>
-                <Header hide="none" />
+                <Header  />
                 <Form>
                     <H>Registration</H>
                     <InputDiv>
@@ -51,6 +52,7 @@ const Register = () => {
                     </InputDivs>
                 </Form>
             </Wrapper>
+            <Social/>
         </Container>
 
     )
@@ -58,14 +60,15 @@ const Register = () => {
 
 const Container = styled.div`
 width:100%;
-height:auto;
+height:100vh;
 background-color:black;
 color:white;
 `
 const Wrapper = styled.div`
-width:1100px;
-height:90%;
+width:1200px;
+height:auto;
 margin:0 auto;
+padding-top:1rem;
 @media(max-width:1100px){
     width:100%;
 }

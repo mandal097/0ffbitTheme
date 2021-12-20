@@ -5,8 +5,10 @@ import { data } from '../dummydatas/cardsData'
 const CardsContainer = () => {
     return (
         <Container>
-            <H3>Fire up your</H3>
-            <H1>NIGHTLIFE WEBSITE WITH OFFBEAT.</H1>
+        <H1>Grab a pick or press a key</H1>
+        <H3>Music will always set you free!</H3>
+        <H3>If your life's song is sounding a bit funny!</H3>
+        <H3>Then we are 'The Missing Note' in your Symphony. </H3>
             <CardContainer>
                 {
                     data.map((i => (
@@ -24,9 +26,11 @@ margin-bottom: 5rem;
 const H3 = styled.h3`
 text-align: center;
 margin-top: 3rem;
-font-size: 10rem;
-font-family: 'Alex Brush', cursive;
-letter-spacing: 1rem;
+margin-left:8rem;
+margin-right:8rem;
+font-size: 3rem;
+font-family: 'Montserrat', sans-serif;
+letter-spacing: .5rem;
 color: orangered;
 font-weight: 400;
 `

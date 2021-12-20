@@ -10,9 +10,7 @@ import {
     YoutubeFilled
 } from '@ant-design/icons'
 
-const Footer = ({ u }) => {
-
-    const footerImage = u.footerImg
+const MainFooter = () => {
     return (
         <Container>
             <Top>
@@ -24,14 +22,10 @@ const Footer = ({ u }) => {
                     </TopBtnDiv>
                 </TopWrapper>
             </Top>
-            <Bottom
-                // style={{
-                //     height: '50vh'
-                // }}
-            >
-                <ImgDiv>
-                    <img src={'/' + footerImage} alt="" />
-                </ImgDiv>
+            <Bottom>
+                {/* <ImgDiv>
+                <img src={'/'+footerImage} alt="" />
+                </ImgDiv> */}
                 <BottomWrapper>
                     <FooterDivs>
                         <FooterH>Contact Us</FooterH>
@@ -177,9 +171,9 @@ font-size: 1.1rem;
 
 const Bottom = styled.div`
 width: 100%;
-height: 70vh;
+height: 60vh;
 background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4));
-/* background-image:  url("https://images.pexels.com/photos/33597/guitar-classical-guitar-acoustic-guitar-electric-guitar.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500"); */
+background-image:  url("https://images.pexels.com/photos/33597/guitar-classical-guitar-acoustic-guitar-electric-guitar.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500");
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
@@ -192,23 +186,23 @@ position:relative;
     height: auto;
 }
 `
-const ImgDiv = styled.div`
-position:absolute;
-top:0;
-height:100%;
-width:100%;
-/* background-color:red; */
-z-index:-1;
-@media(max-width:1000px){
-height: 100%;
-}
-img{
-    height:100%;
-    width:100%;
-    z-index:-91;
-    object-fit:cover;
-}
-`
+// const ImgDiv = styled.div`
+// position:absolute;
+// top:0;
+// height:70vh;
+// width:100%;
+// /* background-color:red; */
+// z-index:-1;
+// @media(max-width:1000px){
+// height: 100%;
+// }
+// img{
+//     height:100%;
+//     width:100%;
+//     z-index:-91;
+//     object-fit:cover;
+// }
+// `
 
 const BottomWrapper = styled.div`
 width: 1200px;
@@ -313,4 +307,4 @@ transition: all 200ms;
 }
 `
 
-export default Footer
+export default MainFooter

@@ -44,15 +44,15 @@ const FullBanner = () => {
                     </AcitveDivs>
                 </Left>
                 <Right>
-                    <RightH> <span> Tabula Music</span> <br />School</RightH>
-                    <RightP>Kale chips mustache drinking vinegar pabst farm-to-table humblebrague shabby chic tousled snackwave iceland.</RightP>
+                    <RightH> <span>The Missing Note</span> <br />Music Academy</RightH>
+                    <RightP>Our sole purpose is to make you love music as much as you love ice-cream!</RightP>
                     <RightPBottom>
                         <RightPBottomWrapper>
                             <RightPBottomIcons>
                                 <PictureOutlined />
                             </RightPBottomIcons>
                             <RightPBottomContent>
-                                <RightPBottomContentSpan>2003</RightPBottomContentSpan>
+                                <RightPBottomContentSpan>2021</RightPBottomContentSpan>
                                 <RightPBottomContentSpanB>YEAR FOUNDED</RightPBottomContentSpanB>
                             </RightPBottomContent>
                         </RightPBottomWrapper>
@@ -61,7 +61,7 @@ const FullBanner = () => {
                                 <UserAddOutlined />
                             </RightPBottomIcons>
                             <RightPBottomContent>
-                                <RightPBottomContentSpan>267</RightPBottomContentSpan>
+                                <RightPBottomContentSpan>50</RightPBottomContentSpan>
                                 <RightPBottomContentSpanB>STUDENTS</RightPBottomContentSpanB>
                             </RightPBottomContent>
                         </RightPBottomWrapper>
@@ -79,7 +79,7 @@ const FullBanner = () => {
                                 <DingtalkOutlined />
                             </RightPBottomIcons>
                             <RightPBottomContent>
-                                <RightPBottomContentSpan>24</RightPBottomContentSpan>
+                                <RightPBottomContentSpan>1</RightPBottomContentSpan>
                                 <RightPBottomContentSpanB>CONCERTS</RightPBottomContentSpanB>
                             </RightPBottomContent>
                         </RightPBottomWrapper>
@@ -102,7 +102,7 @@ background-size: cover;
 background-repeat: no-repeat;
 margin-bottom: 8rem;
 background-attachment: fixed;
-font-family: 'Baloo 2', cursive; 
+font-family: 'Baloo 2', cursive;
 `
 const Wrapper = styled.div`
 height: 100%;
@@ -112,10 +112,10 @@ justify-content: space-between;
 padding: 3rem;
 @media(max-width:1200px){
     width: 100%;
-} 
+}
 @media(max-width:850px){
     flex-direction: column;
-} 
+}
 `
 
 const Left = styled.div`
@@ -128,7 +128,7 @@ justify-content: center;
 @media(max-width:850px){
    width: 90%;
    margin:0 auto;
-} 
+}
 `
 
 const LeftH = styled.h2`
@@ -188,7 +188,7 @@ justify-content: space-between;
 @media(max-width:850px){
    width: 90%;
    margin:0 auto;
-} 
+}
 `
 const RightH = styled.h1`
 font-size: 6rem;
@@ -227,7 +227,7 @@ justify-content: space-evenly;
 margin: 1rem;
 @media(max-width:1024px){
     font-size: 0.7rem;
-} 
+}
 `
 const RightPBottomIcons = styled.div`
 font-size: 4rem;

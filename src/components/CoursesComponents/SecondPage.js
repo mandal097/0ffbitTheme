@@ -10,9 +10,9 @@ const SecondPage = ({ u }) => {
                     <HashSecond>#</HashSecond>
                 </Left>
                 <Right>
-                    <RightH> <span> Programs for every</span> level and need</RightH>
-                    <RightP>Tabula Music School successfully raises the bar on music education, with a commitment to excellence, and a mission to help both music majors and non-music majors reach their creative potential. School period of music studies which can be 2 years for deep skills.</RightP>
-                    <RightPBottom>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X.</RightPBottom>
+                    <RightH> <span>{u.secondPageContentTopRed} <br /></span>{u.secondPageContentTopBlack}</RightH>
+                    <RightP>{u.secondPageContentMiddle}</RightP>
+                    <RightPBottom>{u.secondPageContentBottom}</RightPBottom>
                 </Right>
             </Wrapper>
         </Container>
@@ -102,7 +102,7 @@ width: 46%;
 height: 90%;
 display: flex;
 flex-direction: column;
-align-items: flex-end;
+align-items: flex-start;
 justify-content: space-around;
 @media(max-width:922px){
     width: 100%;
