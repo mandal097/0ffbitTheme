@@ -14,7 +14,7 @@ const Header = ({black,left}) => {
     // const [bg, setBg] = useState(false);
 
     const goToCourses =()=>{
-        navigate('/course/1')
+        navigate('/course')
     }
     const goToRegister =()=>{
         navigate('/register')
@@ -98,7 +98,7 @@ height: 100%;
 padding:1rem;
 `
 const HeaderLeftImage = styled.div`
-width: 20%;
+width: 10%;
 height: 100%;
 
 display: flex;

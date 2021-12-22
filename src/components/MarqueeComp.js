@@ -15,8 +15,8 @@ const MarqueeComp = () => {
                         overflow: 'hidden'
                     }}
                     gradient={false}
-                    pauseOnHover={true}
-                    speed={200}
+                    pauseOnHover={false}
+                    speed={80}
                     loop={0}
                     delay={1}
                 >

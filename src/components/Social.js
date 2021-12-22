@@ -19,7 +19,7 @@ const Container = styled.div`
 position:fixed;
 top:40%;
 left:1rem;
-width:5rem;
+width:3.5rem;
 height:10rem;
 display: flex;
 flex-direction:column;
@@ -38,7 +38,7 @@ z-index:1000;
     }
 }
 @media(max-width:510px){
-    width: 22%;
+    width: 3rem;
 }
 `
 
