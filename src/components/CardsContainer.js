@@ -5,10 +5,10 @@ import { data } from '../dummydatas/cardsData'
 const CardsContainer = () => {
     return (
         <Container>
-        <H1>Grab a pick or press a key</H1>
+        {/* <H1>Grab a pick or press a key</H1>
         <H3>Music will always set you free!</H3>
         <H3>If your life's song is sounding a bit funny!</H3>
-        <H3>Then we are 'The Missing Note' in your Symphony. </H3>
+        <H3>Then we are 'The Missing Note' in your Symphony. </H3> */}
             <CardContainer>
                 {
                     data.map((i => (

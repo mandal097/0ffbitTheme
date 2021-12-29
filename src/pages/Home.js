@@ -11,10 +11,10 @@ const Home = () => {
     return (
         <Container>
             <LandingPage />
+            <Purchase />
             <CardsContainer />
             <FullBanner />
             <MarqueeComp />
-            <Purchase />
             <MainFooter />
             <Social/>
         </Container>
