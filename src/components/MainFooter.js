@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
+import GetInTouch from './GetInTouch'
 import {
     PhoneOutlined,
     EnvironmentOutlined,
@@ -11,13 +12,17 @@ import {
 } from '@ant-design/icons'
 
 const MainFooter = () => {
+    const [showPopUp, setShowPopUp] = useState(false)
     return (
         <Container>
+            {
+                showPopUp && <GetInTouch setShowPopUp={setShowPopUp} />
+            }
             <Top>
                 <TopWrapper>
                     <TopH>Can't find what you're looking for?</TopH>
-                    <TopBtnDiv>
-                        <BtnTxt className="txt">Get in touch</BtnTxt>
+                    <TopBtnDiv onClick={()=>setShowPopUp(true)}>
+                        <BtnTxt className="txt" >Get in touch</BtnTxt>
                         <TopBtnInnerDiv className="innnerdiv"></TopBtnInnerDiv>
                     </TopBtnDiv>
                 </TopWrapper>

@@ -56,3 +56,11 @@ code {
     height: 50vh;
   }
 }
+@keyframes fade{
+  from{
+   opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
