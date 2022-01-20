@@ -102,7 +102,7 @@ background-size: cover;
 background-repeat: no-repeat;
 margin-bottom: 8rem;
 background-attachment: fixed;
-font-family: 'Baloo 2', cursive;
+font-family: 'Spartan';
 `
 const Wrapper = styled.div`
 height: 100%;

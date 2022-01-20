@@ -1,6 +1,6 @@
 // import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
-import { NavLink, useNavigate } from 'react-router-dom'
+import {  useNavigate } from 'react-router-dom'
 import {
     ClockCircleOutlined,
     PhoneOutlined,
@@ -13,12 +13,6 @@ const Header = ({black,left}) => {
     const navigate = useNavigate()
     // const [bg, setBg] = useState(false);
 
-    const goToCourses =()=>{
-        navigate('/course')
-    }
-    const goToRegister =()=>{
-        navigate('/register')
-    }
 
 
     // useEffect(() => {
@@ -37,21 +31,23 @@ const Header = ({black,left}) => {
 
     return (
         <HeaderContainer>
-            <HeaderContainerTop 
-           style={{backgroundColor:`${black}`}} 
+            <HeaderContainerTop
+           style={{backgroundColor:`${black}`}}
             >
-                <HeaderLeftImage >
+                {/* <HeaderLeftImage >
                     <NavLink to="/">
-                        <img 
-                         src="/Images/1HLogoWhiteLinesNoBG.png" 
+                        <img
+                         src="/Images/1HLogoWhiteLinesNoBG.png"
                          alt=""
                          style={{marginLeft:`${left}`}}
                          />
                     </NavLink>
-                </HeaderLeftImage>
+                </HeaderLeftImage> */}
                 <HeaderLeft >
-                    <HeaderLeftSpan onClick={goToCourses}>Our Story</HeaderLeftSpan>
-                    <HeaderLeftSpan onClick={goToRegister} >Register Here</HeaderLeftSpan>
+                    <HeaderLeftSpan onClick={() => navigate('/')}>Home</HeaderLeftSpan>
+                    <HeaderLeftSpan onClick={() => navigate('/course')}>Our Story</HeaderLeftSpan>
+                    <HeaderLeftSpan >Join Our Team</HeaderLeftSpan>
+                    <HeaderLeftSpan onClick={() => navigate('/register')}>Register Here</HeaderLeftSpan>
                 </HeaderLeft>
                 <HeaderRight>
                     <InfoDIv>
@@ -86,8 +82,9 @@ const Header = ({black,left}) => {
 
 const HeaderContainer = styled.div`
 width: 100%;
-height: 7.2rem;
-font-family: 'Baloo 2', cursive;
+height: 8rem;
+font-family: 'Spartan';
+color:white;
 `
 const HeaderContainerTop = styled.div`
 width: 100%;
@@ -95,27 +92,27 @@ display: flex;
 align-items: center;
 justify-content: space-between;
 height: 100%;
-padding:1rem;
+padding: 0 1rem;
 `
-const HeaderLeftImage = styled.div`
-width: 10%;
-height: 100%;
+// const HeaderLeftImage = styled.div`
+// width: 10%;
+// height: 100%;
 
-display: flex;
-justify-content: space-between;
-img{
-    height: 100%;
-    object-fit: cover;
-    cursor: pointer;
-}
-@media(max-width:510px){
-    width: 30%;
-}
+// display: flex;
+// justify-content: space-between;
+// img{
+//     height: 100%;
+//     object-fit: cover;
+//     cursor: pointer;
+// }
+// @media(max-width:510px){
+//     width: 30%;
+// }
 
-`
+// `
 
 const HeaderLeft = styled.div`
-width: 25%;
+width: 50%;
 height: 100%;
 display:flex;
     align-items: center;
@@ -167,14 +164,14 @@ margin-left: 1rem;
 
 `
 const InfoDIvRightTop = styled.span`
-font-size: 1.1rem;
+font-size: 1.5rem;
 font-weight: bold;
 color:  #fe0049;
 
 `
 const InfoDIvRightBottom = styled.span`
 font-size: 1.2rem;
-font-weight:400;
+font-weight:600;
 
 `
 

@@ -8,6 +8,7 @@ import ThirdPage from '../components/CoursesComponents/ThirdPage'
 import { useLocation } from 'react-router-dom'
 import { data } from '../dummydatas/cardsData'
 import Social from '../components/Social'
+import Header from '../components/CoursesComponents/Header'
 const Course = () => {
 
     const location = useLocation()
@@ -17,6 +18,7 @@ const Course = () => {
 
     return (
         <Container>
+              <Header black='black' />
             <FirstPage u={u} />
             <SecondPage u={u} />
             <Schedules u={u} />
@@ -30,7 +32,7 @@ const Course = () => {
 const Container = styled.div`
 height: 100vh;
 overflow-y: scroll;
-font-family: 'Baloo 2', cursive;
+font-family: 'Spartan';
 `
 
 export default Course

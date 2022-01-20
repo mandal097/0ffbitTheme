@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import Header from './Header'
 
 const FirstPage = ({ u }) => {
     const image = u.courseFirstPageImg
@@ -10,7 +9,6 @@ const FirstPage = ({ u }) => {
                 <ImgDiv>
                     <img src={'/' + image} alt="" />
                 </ImgDiv>
-                    <Header black='black' left="5rem" />
                 <Wrapper>
                     <Content>
                         <ContentH>{u.title}</ContentH>
@@ -31,7 +29,8 @@ background-repeat: no-repeat;
 background-size: cover;
 background-position: center;
 color: white;
-font-family: Verdana, Geneva, Tahoma, sans-serif;
+/* margin-top:3rem; */
+/* font-family: Verdana, Geneva, Tahoma, sans-serif; */
 position:relative;
 /* padding-top:1rem; */
 @media (max-width:1210px){
@@ -81,14 +80,15 @@ padding:0 4rem;
 `
 const ContentH = styled.h2`
 font-size: 6rem;
-font-weight: 400;
+font-weight: 600;
 margin-bottom: 1rem;
-font-family: 'Baloo 2', cursive;
+font-family: 'Spartan';
 `
 const ContentP = styled.p`
-font-size: 1.8rem;
+font-size: 2rem;
 line-height: 1.5;
 font-weight: 400;
-font-family: 'Baloo 2', cursive;
+text-align:justify;
+font-family: 'Spartan';
 `
 export default FirstPage

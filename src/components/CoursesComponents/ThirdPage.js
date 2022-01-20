@@ -44,7 +44,7 @@ font-size: 3rem;
 display: flex;
 align-items: center;
 justify-content: center;
-font-family:Verdana, Geneva, Tahoma, sans-serif;
+/* font-family:Verdana, Geneva, Tahoma, sans-serif; */
 `
 const Wrapper = styled.div`
 width: 1200px;

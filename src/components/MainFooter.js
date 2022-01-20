@@ -36,15 +36,15 @@ const MainFooter = () => {
                         <FooterH>Contact Us</FooterH>
                         <FooterWrap>
                             <FooterWrapIcon><EnvironmentOutlined className="icon" /></FooterWrapIcon>
-                            <FooterWrapP>Franklin St, Greenpoint Ave</FooterWrapP>
+                            <FooterWrapP>DLF Capital Greens, New Delhi</FooterWrapP>
                         </FooterWrap>
                         <FooterWrap>
                             <FooterWrapIcon><PhoneOutlined className="icon" /></FooterWrapIcon>
-                            <FooterWrapP>Franklin St, Greenpoint Ave</FooterWrapP>
+                            <FooterWrapP>9711010750 | 9711983158</FooterWrapP>
                         </FooterWrap>
                         <FooterWrap>
                             <FooterWrapIcon><ClockCircleOutlined className="icon" /></FooterWrapIcon>
-                            <FooterWrapP>Franklin St, Greenpoint Ave</FooterWrapP>
+                            <FooterWrapP>11 am - 09 pm</FooterWrapP>
                         </FooterWrap>
                         <FooterWrap>
                             <FooterWrapIcon className="socialLinks">
@@ -103,7 +103,7 @@ const MainFooter = () => {
 
 const Container = styled.div`
 width: 100%;
-font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-family: Spartan;
 color: white;
 `
 const Top = styled.div`
@@ -121,7 +121,7 @@ justify-content: space-between;
 @media (max-width:1210px){
     width: 90%;
     margin:0 auto;
-} 
+}
 `
 const TopH = styled.h1`
 font-size: 4rem;

@@ -165,7 +165,16 @@ const Register = (props) => {
                     </InputDiv> */}
                     <TermsCondition>Terms & and Condition :</TermsCondition>
                     <Terms>
-                        <TermsText>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit exercitationem, eius libero minus qui sunt consectetur cupiditate. Autem quo quisquam perspiciatis vitae atque expedita sequi tempora aliquid repellat? Modi ducimus dignissimoorem ipsum dolor sit amet consectetur adipisicing elit. Odit exercitationem, eius libero minus qui sunt consectetur cupiditate. Autem quo quisquam perspiciatis vitae atque expedita sequi tempora aliquid repellat? Modi ducimus dignissimoorem ipsum dolor sit amet consectetur adipisicing elit. Odit exercitationem, eius libero minus qui sunt consectetur cupiditate. Autem quo quisquam perspiciatis vitae atque expedita sequi tempora aliquid repellat? Modi ducimus dignissimoorem ipsum dolor sit amet consectetur adipisicing elit. Odit exercitationem, eius libero minus qui sunt consectetur cupiditate. Autem quo quisquam perspiciatis vitae atque expedita sequi tempora aliquid repellat? Modi ducimus dignissimos commodi magni pariatur debitis deserunt ipsum labore eum doloribus?</TermsText>
+                        <TermsText>We request you to kindly go through & accept the following Terms & Conditions:
+                        <li>Each session comprises of 8 classes, which are conducted twice every week.</li>
+                        <li>We are happy to compensate for 01 missed class during a session. Additional missed classes will be counted.</li>                        
+                        <li>Each class is for 60 mins.</li>
+                        <li>The student must attend all classes as per the schedule shared by the institute.</li>
+                        <li>The students must carry a notebook and a pen with them to the session.</li>
+                        <li>The Session fee has to be paid before the session begins and is non refundable.</li>
+                        <li>Students are grouped together their familiarity & experience with the instrument. This grouping is based solely on the institute's discretion and is subject to change depending on the student's progression.</li>
+
+                    </TermsText>
                         <CheckboxDiv>
                             <Checkbox type='checkbox' onChange={handleCheck} />
                             <CheckboxText>I Agree to the Terms & conditions</CheckboxText>
@@ -191,7 +200,7 @@ width:100%;
 height:100vh;
 background-color:black;
 color:white;
-font-family: 'Baloo 2', cursive;
+font-family: 'Spartan';
 overflow-y:scroll;
 `
 const Wrapper = styled.div`
@@ -231,21 +240,25 @@ background-color:goldenrod;
     }
 }
 `
-const P = styled.p`
+const P = styled.div`
 font-size:2.5rem;
+width:80%;
+margin:0rem auto;
 font-weight:100;
-font-family: 'Baloo 2', cursive;
+font-family: 'Spartan';
 text-align:center;
 position:relative;
-padding:4rem 0;
-&::before{
+padding:2rem 0 1rem 0;
+margin-bottom:3rem;
+border-bottom:2px solid white;
+/* &::before{
     content:'';
     position:absolute;
     width:60rem;
     height:2px;
     background-color:white;
     bottom:4rem;
-}
+} */
 `
 const InputDiv = styled.div`
 width:100%;
@@ -331,7 +344,7 @@ padding:2rem;
 overflow-Y:scroll;
 &::-webkit-scrollbar {
     width: 8px;
-} 
+}
 &::-webkit-scrollbar-track {
     background: #f1f1f1;
 }

@@ -104,7 +104,7 @@ const Footer = ({ u }) => {
 
 const Container = styled.div`
 width: 100%;
-font-family: Verdana, Geneva, Tahoma, sans-serif;
+/* font-family: Verdana, Geneva, Tahoma, sans-serif; */
 color: white;
 `
 const Top = styled.div`
@@ -122,7 +122,7 @@ justify-content: space-between;
 @media (max-width:1210px){
     width: 90%;
     margin:0 auto;
-} 
+}
 `
 const TopH = styled.h1`
 font-size: 4rem;

@@ -125,7 +125,7 @@ display:flex;
 align-items:center;
 justify-content:center;
 color:black;
-font-family: 'Baloo 2', cursive;
+font-family: 'Spartan';
 animation: fade 700ms linear  ;
 `
 const Form = styled.form`

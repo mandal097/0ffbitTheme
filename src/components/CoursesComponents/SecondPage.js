@@ -25,7 +25,7 @@ width: 100%;
 display: flex;
 justify-content: center;
 align-items: center;
-font-family: Verdana, Geneva, Tahoma, sans-serif;
+/* font-family: Verdana, Geneva, Tahoma, sans-serif; */
 @media(max-width:922px){
     height: auto;
 }

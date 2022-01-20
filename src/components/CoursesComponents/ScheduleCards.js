@@ -44,14 +44,14 @@ min-width: 380px;
 max-width: 380px;
 height: auto;
 font-size: 3rem;
-font-family: Verdana, Geneva, Tahoma, sans-serif;
+/* font-family: Verdana, Geneva, Tahoma, sans-serif; */
 display: flex;
 align-items: center;
 justify-content: center;
 position: relative;
 background:linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.6));
 margin: 1rem 0;
-font-family: 'Baloo 2', cursive;
+font-family: 'Spartan';
 `
 const Img = styled.img`
 position: absolute;

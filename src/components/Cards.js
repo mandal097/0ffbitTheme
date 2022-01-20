@@ -30,14 +30,15 @@ justify-content: center;
 transition: all 200ms linear;
 margin: 1rem;
 position: relative;
-font-family: 'Baloo 2', cursive;
+font-family: 'Spartan';
+
 .nav{
     text-decoration: none;
 }
 &:hover{
     transform: translateY(-2rem);
     .title{
-        transform: translateY(-1rem);
+        transform: translateY(-0.7rem);
     }
 }
 `
@@ -48,9 +49,9 @@ object-fit: cover;
 `
 const Content = styled.div`
 position: absolute;
-padding: 4rem;
+padding: 3rem;
 width: 100%;
-height: 35%;
+height: 60%;
 bottom: 5.9rem;
 display: flex;
 flex-direction: column;
@@ -59,27 +60,29 @@ justify-content: space-evenly;
 /* background: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,.6)); */
 `
 const Small = styled.small`
-font-size:1.4rem;
+font-size:1.6rem;
 color: white;
 text-transform: uppercase;
+font-weight:bold;
 `
 
 const GuitarLessons = styled.span`
-font-size: 2.5rem;
+font-size: 2.7rem;
 color: white;
 font-weight: bold;
 `
 
-const P = styled.span`
+const P = styled.p`
 font-size: 1.5rem;
 color: white;
 font-weight: 400;
 line-height: 1.8;
+text-align:justify;
 text-shadow: 1px 10px 2px 1px black;
 
 `
 const Span = styled.span`
-font-size: 1.4rem;
+font-size: 1.7rem;
 color: lightpink;
 text-transform: uppercase;
 font-weight: bold;
@@ -94,7 +97,7 @@ font-weight: bolder;
 text-transform: uppercase;
 transition: all 100ms linear;
 transition-delay: 200ms;
-margin-top: 1rem;
+margin-top: 1.7rem;
 `
 
 

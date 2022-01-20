@@ -8,7 +8,7 @@ export const data=[
     },
     {
         id:2,
-        content:" Tabula Music School successfully raises the bar on music education, with a commitmentn.",
+        content:" Tabula Music School successfully raises the bar on music education, with a commitment.",
         name:"jennifer",
         status:'student',
         img:'https://images.pexels.com/photos/2016810/pexels-photo-2016810.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
