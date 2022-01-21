@@ -34,6 +34,7 @@ font-family: 'Spartan';
 
 .nav{
     text-decoration: none;
+    color:#fe0049;
 }
 &:hover{
     transform: translateY(-2rem);
@@ -64,12 +65,14 @@ font-size:1.6rem;
 color: white;
 text-transform: uppercase;
 font-weight:bold;
+text-shadow: 1px 1px black;
 `
 
 const GuitarLessons = styled.span`
 font-size: 2.7rem;
 color: white;
 font-weight: bold;
+text-shadow: 2px 2px black;
 `
 
 const P = styled.p`
@@ -78,16 +81,17 @@ color: white;
 font-weight: 400;
 line-height: 1.8;
 text-align:justify;
-text-shadow: 1px 10px 2px 1px black;
+text-shadow: 2px  2px  black;
 
 `
 const Span = styled.span`
-font-size: 1.7rem;
-color: lightpink;
+font-size: 1.6rem;
+color: #fe0049;
 text-transform: uppercase;
 font-weight: bold;
 cursor: pointer;
 text-decoration: none;
+text-shadow:0.5px 0.1px red;
 `
 
 const CardTitle = styled.span`

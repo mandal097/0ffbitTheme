@@ -62,7 +62,7 @@ height: 40vh;
 display: flex;
 flex-direction: column;
 align-items: center;
-justify-content: space-evenly;
+justify-content: space-between;
 padding: 1rem;
 `
 const CardTopDiv = styled.div`
@@ -89,15 +89,16 @@ transition: all 500ms linear;
 `
 
 const CardSpan = styled.span`
-font-size: 1.3rem;
-font-weight: 600;
+font-size: 1.7rem;
+font-weight: bold;
 `
 const CardP = styled.p`
 text-align: center;
-font-size: 1.4rem;
-font-weight: 100;
-color: rgba(0,0,0,0.9);
+font-size: 1.3rem;
+font-weight: 600;
+color:black;
 line-height: 1.5;
+text-align:justify;
 `
 
 export default ThirdPage

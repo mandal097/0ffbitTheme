@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import {
     PhoneOutlined,
@@ -9,17 +9,24 @@ import {
     FacebookFilled,
     YoutubeFilled
 } from '@ant-design/icons'
+import GetInTouch from '../GetInTouch';
 
 const Footer = ({ u }) => {
+    const [showPopUp, setShowPopUp] = useState(false)
+    
 
     const footerImage = u.footerImg
     return (
         <Container>
+            {
+                showPopUp &&   <GetInTouch setShowPopUp={setShowPopUp}/>
+            }
+          
             <Top>
                 <TopWrapper>
                     <TopH>Can't find what you're looking for?</TopH>
                     <TopBtnDiv>
-                        <BtnTxt className="txt">Get in touch</BtnTxt>
+                        <BtnTxt className="txt" onClick={()=>setShowPopUp(true)}>Get in touch</BtnTxt>
                         <TopBtnInnerDiv className="innnerdiv"></TopBtnInnerDiv>
                     </TopBtnDiv>
                 </TopWrapper>

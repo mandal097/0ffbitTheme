@@ -22,7 +22,7 @@ const GetInTouch = ({ setShowPopUp }) => {
         e.preventDefault()
         if (validform) {
             validform()
-            console.log('sdhglka');
+            console.log(query);
         } else {
             console.log('Here is an error');
         }

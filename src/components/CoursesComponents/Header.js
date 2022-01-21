@@ -82,7 +82,7 @@ const Header = ({black,left}) => {
 
 const HeaderContainer = styled.div`
 width: 100%;
-height: 8rem;
+height: 7.8rem;
 font-family: 'Spartan';
 color:white;
 `
@@ -129,8 +129,14 @@ justify-content:space-between;
 }
 `
 const HeaderLeftSpan = styled.span`
-font-size:2rem;
+font-size:1.8rem;
+font-weight:400;
 cursor:pointer;
+padding-bottom:0.5rem;
+transition:all 300ms linear;
+&:hover{
+border-bottom:2px solid white;
+}
 @media(max-width:680px){
     font-size:1.4rem;
 }
@@ -147,7 +153,7 @@ justify-content: space-evenly;
 
 `
 const InfoDIv = styled.div`
-font-size: 3rem;
+font-size: 3.5rem;
 display: flex;
 align-items: center;
 
@@ -164,14 +170,14 @@ margin-left: 1rem;
 
 `
 const InfoDIvRightTop = styled.span`
-font-size: 1.5rem;
+font-size: 1.4rem;
 font-weight: bold;
 color:  #fe0049;
 
 `
 const InfoDIvRightBottom = styled.span`
-font-size: 1.2rem;
-font-weight:600;
+font-size: 1.3rem;
+font-weight:400;
 
 `
 

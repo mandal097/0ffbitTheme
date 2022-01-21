@@ -113,6 +113,7 @@ const RightH = styled.h1`
 font-size: 4rem;
 font-weight: 400;
 line-height: 1.5;
+text-align:justify;
 span{
     font-weight: bold;
     color: red;
@@ -122,6 +123,7 @@ const RightP = styled.p`
 font-size: 2rem;
 line-height: 1.5;
 font-weight:400;
+text-align:justify;
 color: grey;
 `
 const RightPBottom = styled.p`

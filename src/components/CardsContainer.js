@@ -23,23 +23,23 @@ const CardsContainer = () => {
 const Container = styled.div`
 margin-bottom: 5rem;
 `
-const H3 = styled.h3`
-text-align: center;
-margin-top: 3rem;
-margin-left:8rem;
-margin-right:8rem;
-font-size: 3rem;
-font-family: 'Montserrat', sans-serif;
-letter-spacing: .5rem;
-color: orangered;
-font-weight: 400;
-`
-const H1 = styled.h1`
-text-align: center;
-font-size: 6rem;
-width: 90%;
-margin: 1rem auto;
-`
+// const H3 = styled.h3`
+// text-align: center;
+// margin-top: 3rem;
+// margin-left:8rem;
+// margin-right:8rem;
+// font-size: 3rem;
+// font-family: 'Montserrat', sans-serif;
+// letter-spacing: .5rem;
+// color: orangered;
+// font-weight: 400;
+// `
+// const H1 = styled.h1`
+// text-align: center;
+// font-size: 6rem;
+// width: 90%;
+// margin: 1rem auto;
+// `
 const CardContainer = styled.div`
 height: auto;
 width: 85%;
